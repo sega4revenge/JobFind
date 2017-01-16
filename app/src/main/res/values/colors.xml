@@ -65,5 +65,10 @@
 
     <color name="text">#488afa</color>
 
+    <color name="slide_1">#4CAF50</color>
+    <color name="slide_2">#2196F3</color>4CAF50
+    <color name="slide_3">#009688</color>
+    <color name="slide_4">#607D8B</color>
 
+    <color name="tutorial_buttonTextColor">#ffffff</color>
 </resources>

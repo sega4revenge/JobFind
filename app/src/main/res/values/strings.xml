@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">QuickJob Find</string>
 
+    <string name="slide_1_title_search">Tìm kiếm nhanh chóng</string>
+    <string name="slide_2_tile_saving_time">Tiết kiệm tối đa</string>
+    <string name="slide_3_title_notification">Thông báo tức thời</string>
+    <string name="slide_4_title_start">Bắt đầu ngay</string>
+    <string name="slide_1_african_story_books_subtitle">Tìm kiếm chính xác công việc và các ứng viên theo yêu cầu.</string>
+    <string name="slide_2_volunteer_professionals_subtitle">Tiết kiệm thời gian và tiền bạc cho người sử dụng.</string>
+    <string name="slide_3_download_and_go_subtitle">Thông báo khi có công việc phù hợp, liên tục cập nhật.</string>
+    <string name="slide_4_different_languages_subtitle">Hãy cùng trải nghiệm và tìm được công việc yêu thích cho bạn</string>
+    <string name="view_sample_tut">View Tutorial Example</string>
+
+    <string name="tutorial_done">BẮT ĐẦU</string>
+    <string name="tutorial_skip">BỎ QUA</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="openDrawer">open_drawer</string>

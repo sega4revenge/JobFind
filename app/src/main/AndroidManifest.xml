@@ -28,7 +28,7 @@
             android:value="@string/facebook_app_id" />
 
         <activity
-            android:name=".activity.WelcomeActivity"
+            android:name=".activity.IntroActivity"
             android:theme="@style/AppThemeIntro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -175,6 +175,10 @@
         <activity
             android:name=".activity.MapsActivity"
             android:label="@string/title_activity_maps"></activity>
+
+        <activity
+            android:name="za.co.riggaroo.materialhelptutorial.tutorial.MaterialTutorialActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>
