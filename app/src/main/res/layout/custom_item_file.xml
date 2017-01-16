@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/liner"
+        android:elevation="1dp"
+        android:padding="5dp"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <com.finger.jobfind.adapter.CircularNetworkImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="8dp"
+                android:scaleType="centerCrop"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Ngành nghề"
+                android:maxLines="1"
+                android:textSize="13sp"
+                android:textColor="#3651c9"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/txt1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/vector_ic_hoso_search"
+                    android:id="@+id/imageView6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chức danh"
+                    android:id="@+id/txt2"
+                    android:ellipsize="end"
+                    android:textSize="12sp"
+                    android:singleLine="true"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView6"
+                    android:layout_toEndOf="@+id/imageView6"
+                    android:layout_marginLeft="5dp"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/vector_ic_money"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mức lương"
+                    android:id="@+id/txt3"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img2"
+                    android:layout_toEndOf="@id/img2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="2dp"/>
+
+            </RelativeLayout>
+
+
+            <!--<RelativeLayout-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+
+                <!--&gt;-->
+                <!--<ImageView-->
+                    <!--android:layout_width="18dp"-->
+                    <!--android:layout_height="18dp"-->
+                    <!--android:id="@+id/img3"-->
+                    <!--android:src="@drawable/vector_ic_location"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Location Location"-->
+                    <!--android:id="@+id/txt4"-->
+                    <!--android:layout_marginRight="80dp"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:layout_marginBottom="2dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_toRightOf="@id/img3"-->
+                    <!--android:layout_toEndOf="@id/img3"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="16/8/2016"-->
+                    <!--android:id="@+id/txt5"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textSize="12dp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textColor="#d73d3d"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_alignParentEnd="true" />-->
+
+            <!--</RelativeLayout>-->
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

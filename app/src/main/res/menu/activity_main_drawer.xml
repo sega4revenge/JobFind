@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <!--<item-->
+            <!--android:id="@+id/nav_search"-->
+            <!--android:icon="@drawable/ic_search_black_24dp"-->
+            <!--android:title="@string/nav_search" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_save"-->
+            <!--android:icon="@drawable/ic_save_black_24dp"-->
+            <!--android:title="@string/nav_save_job" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_apply"-->
+            <!--android:icon="@drawable/ic_assignment_black_24dp"-->
+            <!--android:title="@string/nav_job_apply" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/nav_profile"-->
+            <!--android:icon="@drawable/ic_account_box_black_24dp"-->
+            <!--android:title="@string/nav_profile" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/nav_4"-->
+            <!--android:icon="@drawable/ic_notifications_black_24dp"-->
+            <!--android:title="@string/nav_notification" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/nav_settings"-->
+            <!--android:icon="@drawable/ic_settings_black_24dp"-->
+            <!--android:title="@string/nav_settings" />-->
+
+        <!--<item-->
+            <!--android:id="@+id/nav_exit"-->
+            <!--android:icon="@drawable/ic_exit_to_app_black_24dp"-->
+            <!--android:title="@string/nav_exit" />-->
+
+
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none"
+        >
+            <!--<item-->
+
+                <!--android:id="@+id/nav_about_us"-->
+            <!--/>/    android:title="@string/nav_about_us" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_privacy_policy"-->
+                <!--android:title="@string/privacy_policy" />-->
+    </group>
+</menu>

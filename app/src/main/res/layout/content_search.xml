@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="?attr/actionBarSize" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+       >
+
+
+        <LinearLayout
+            android:id="@+id/id1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:id="@+id/id12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:background="@drawable/style_shadow"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_weight="50"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="25dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:background="@drawable/vector_ic_manager_search"-->
+                    <!--android:paddingTop="10dp" />-->
+
+                    <Spinner
+                        android:id="@+id/spnganh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        style="?android:attr/spinnerDropDownItemStyle"></Spinner>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_weight="50"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp">
+
+                    <Spinner
+                        android:id="@+id/spdiadiem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        style="?android:attr/spinnerDropDownItemStyle"></Spinner>
+                </LinearLayout>
+            </LinearLayout>
+            <!--<ProgressBar-->
+            <!--android:id="@+id/pbLoader"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:visibility="gone"-->
+            <!--style="?android:attr/progressBarStyle">-->
+            <!--</ProgressBar>-->
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/activity_main_swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    />
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
