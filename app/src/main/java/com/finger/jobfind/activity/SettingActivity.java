@@ -60,6 +60,8 @@ public class SettingActivity extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), InfoActivity.class));
+                getActivity().overridePendingTransition(R.anim.anim_slide_in_left,
+                        R.anim.anim_slide_out_left);
             }
         });
         lnexit.setOnClickListener(new View.OnClickListener() {

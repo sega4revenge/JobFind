@@ -333,6 +333,7 @@ public class EditInfoActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         finish();
+
     }
 
     @Override
@@ -507,5 +508,7 @@ public class EditInfoActivity extends AppCompatActivity {
         //Adding request to the queue
         requestQueue.add(stringRequest);
     }
+
+
 
 }

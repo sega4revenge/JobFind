@@ -242,9 +242,13 @@ public class InfoActivity extends AppCompatActivity {
 //            s.putExtra("logo",logo);
 //            startActivity(s);
 //            startActivity(new Intent(getApplicationContext(), InfoActivity.class));
+
             finish();
+            overridePendingTransition(R.anim.anim_slide_in_right,
+                    R.anim.anim_slide_out_right);
         } if (id == R.id.edit){
             Intent s =new Intent(getApplicationContext(), EditInfoActivity.class);
+
             s.putExtra("ten",ten);
             s.putExtra("mail",em);
             s.putExtra("ngaysinh",ns);
@@ -252,7 +256,8 @@ public class InfoActivity extends AppCompatActivity {
             s.putExtra("quequan",qq);
             s.putExtra("logo",logo);
             startActivity(s);
-
+            overridePendingTransition(R.anim.anim_slide_in_left,
+                    R.anim.anim_slide_out_left);
 
         }
 
@@ -268,5 +273,7 @@ public class InfoActivity extends AppCompatActivity {
             }
         }
     }
+
+
 
 }
