@@ -1,1 +1,1 @@
-include ':app', ':materialhelptutorial'
+include ':app'
