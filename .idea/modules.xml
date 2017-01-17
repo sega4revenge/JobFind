@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/JobFind.iml" filepath="$PROJECT_DIR$/JobFind.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialhelptutorial/materialhelptutorial.iml" filepath="$PROJECT_DIR$/materialhelptutorial/materialhelptutorial.iml" />
     </modules>
   </component>
 </project>
