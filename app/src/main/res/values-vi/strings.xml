@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Job Find</string>
+    <string name="app_name">QuickJob Find</string>
 
     <string name="slide_1_title_search">Tìm kiếm nhanh chóng</string>
     <string name="slide_2_tile_saving_time">Tiết kiệm tối đa</string>

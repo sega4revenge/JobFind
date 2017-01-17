@@ -43,7 +43,7 @@ public class IntroActivity extends AppCompatActivity {
         Intent mainAct = new Intent(this, MaterialTutorialActivity.class);
         mainAct.putParcelableArrayListExtra(MaterialTutorialActivity.MATERIAL_TUTORIAL_ARG_TUTORIAL_ITEMS, getTutorialItems(this));
         startActivityForResult(mainAct, REQUEST_CODE);
-        finish();
+//        finish();
 
 
     }
