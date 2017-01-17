@@ -1,18 +1,18 @@
 <resources>
     <string name="app_name">QuickJob Find</string>
 
-    <string name="slide_1_title_search">Tìm kiếm nhanh chóng</string>
-    <string name="slide_2_tile_saving_time">Tiết kiệm tối đa</string>
-    <string name="slide_3_title_notification">Thông báo tức thời</string>
-    <string name="slide_4_title_start">Bắt đầu ngay</string>
-    <string name="slide_1_african_story_books_subtitle">Tìm kiếm chính xác công việc và các ứng viên theo yêu cầu.</string>
-    <string name="slide_2_volunteer_professionals_subtitle">Tiết kiệm thời gian và tiền bạc cho người sử dụng.</string>
-    <string name="slide_3_download_and_go_subtitle">Thông báo khi có công việc phù hợp, liên tục cập nhật.</string>
-    <string name="slide_4_different_languages_subtitle">Hãy cùng trải nghiệm và tìm được công việc yêu thích cho bạn</string>
+    <string name="slide_1_title_search">Quick search</string>
+    <string name="slide_2_tile_saving_time">Maximum savings</string>
+    <string name="slide_3_title_notification">Instant message</string>
+    <string name="slide_4_title_start">Are you ready?</string>
+    <string name="slide_1_african_story_books_subtitle">Accurate job search and on-demand candidates.</string>
+    <string name="slide_2_volunteer_professionals_subtitle">Save time and money for the user.</string>
+    <string name="slide_3_download_and_go_subtitle">Notification when a suitable job, constantly update the latest work</string>
+    <string name="slide_4_different_languages_subtitle">Lets experiment and find what works for your favorite</string>
     <string name="view_sample_tut">View Tutorial Example</string>
 
-    <string name="tutorial_done">BẮT ĐẦU</string>
-    <string name="tutorial_skip">BỎ QUA</string>
+    <string name="tutorial_done">START</string>
+    <string name="tutorial_skip">SKIP</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -28,7 +28,7 @@
     <string name="jobapply">Job application</string>
     <string name="jobsave">Saved Job</string>
 
-    <string name="view">Views:</string>
+    <string name="view">Views</string>
     <!-- Toolbar titles when navigation menu item is selected -->
     <string-array name="nav_item_activity_titles">
         <item>Home</item>
@@ -80,7 +80,7 @@
     <string name="st_hintEmail">Email</string>
     <string name="st_hintPass">Password</string>
     <string name="st_savePass">remember password</string>
-    <string name="st_forgotPass">Forget password:</string>
+    <string name="st_forgotPass"><u>Forget password</u></string>
     <string name="st_txtDangky">Create Account</string>
     <string name="st_txtDangNhap">Did you got account?sign in now</string>
     <string name="st_renewpass">Enter password again</string>
@@ -201,8 +201,8 @@
     <string name="st_motacv">Describe job</string>
     <string name="st_yeucaucv">Require job</string>
     <string name="st_dotuoiCV">Age</string>
-    <string name="st_ycngoainguCV">Require foreign language:</string>
-    <string name="st_yckynangCV">Require skill:</string>
+    <string name="st_ycngoainguCV">Require foreign language</string>
+    <string name="st_yckynangCV">Require skill</string>
     <string name="st_yckhacCV">Other requirements</string>
     <string name="st_ungtuyenCV">Recruitment</string>
     <string name="st_goidienCV">Call</string>
@@ -222,7 +222,7 @@
     <string name="st_nam">Year</string>
 
     <string name="st_endDate">Time limit to apply profile</string>
-    <string name="st_quenmk_ten">Forget password:</string>
+    <string name="st_quenmk_ten">Forget password</string>
     <string name="st_ktTimKiem">Search Results</string>
     <string name="st_btnthem">Create</string>
     <string name="st_quenmkTK">Forget password?</string>
@@ -244,7 +244,7 @@
     <string name="registry_success">Sign Up Success</string>
     <string name="st_xacNhanCancel">No</string>
     <string name="st_xacNhanXoaCV">Do you want to delete this job?</string>
-    <string name="st_chuacoTK">Do not have account! Sign Up Now</string>
+    <string name="st_chuacoTK"><u>Sign Up Now</u></string>
     <string name="login_success">Login Success</string>
     <string name="hint_search">Enter the name of the job</string>
 
@@ -264,9 +264,9 @@
     <string name="title_activity_more_new_">New Job</string>
     <string name="toprecruiter">Top Recruiter</string>
     <string name="more">More</string>
-    <string name="nearhere">Near here:</string>
-    <string name="jobhot">Hot Jobs:</string>
-    <string name="st_title_dscv_cty">Work list:</string>
+    <string name="nearhere">Near here</string>
+    <string name="jobhot">Hot Jobs</string>
+    <string name="st_title_dscv_cty">Work list</string>
     <string name="st_ttud">Application Information</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_maps2">Map</string>
