@@ -18,7 +18,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="openDrawer">open_drawer</string>
     <string name="closeDrawer">close_drawer</string>
-    <string name="view">lượt xem:</string>
+    <string name="view">lượt xem</string>
     <!-- Navigation Drawer menu labels -->
     <string name="tab_Home">Trang chủ</string>
     <string name="tab_JobManager">Quản lý</string>
@@ -79,7 +79,7 @@
     <string name="st_hintEmail">Email</string>
     <string name="st_hintPass">Mật khẩu</string>
     <string name="st_savePass">Nhớ mật khẩu</string>
-    <string name="st_forgotPass">Quên mật khẩu?</string>
+    <string name="st_forgotPass"><u>Quên mật khẩu?</u></string>
     <string name="st_txtDangky">Chưa có tài khoản? Đăng ký ngay!</string>
     <string name="st_txtDangNhap">Đã có tài khoản? Đăng nhập ngay!</string>
     <string name="st_renewpass">Nhập lại mật khẩu</string>
@@ -136,7 +136,7 @@
     <string name="st_hintYeuCau">YÊU CẦU</string>
     <string name="st_hintYeuCauTuoi">Tuổi yêu cầu</string>
     <string name="st_gtKhac">Khác</string>
-    <string name="st_gt">Giới tính:</string>
+    <string name="st_gt">Giới tính</string>
     <string name="st_ycKhac">Yêu cầu khác</string>
     <string name="st_phucloi">Phúc lợi</string>
     <string name="st_btnNhapLai">Nhập lại</string>
@@ -150,8 +150,8 @@
     <string name="st_ngoaingu">Ngoại ngữ</string>
     <string name="st_kinang">Kỹ năng</string>
     <!--dialog mức lương-->
-    <string name="st_tu">Từ:</string>
-    <string name="st_den">Đến:</string>
+    <string name="st_tu">Từ</string>
+    <string name="st_den">Đến</string>
     <string name="st_err_anh">Hãy chọn ảnh</string>
     <string name="st_doTuoiYC">Nhập độ tuổi yêu cầu</string>
     <string name="st_uploading">Đang tải...</string>
@@ -221,7 +221,7 @@
     <string name="st_kinhnghiem">Kinh nghiệm</string>
     <string name="st_nam">Năm</string>
 
-    <string name="st_endDate">Ngày hết hạn:</string>
+    <string name="st_endDate">Ngày hết hạn</string>
     <string name="st_quenmk_ten">Quên mật khẩu?</string>
     <string name="st_ktTimKiem">Kết quả tìm kiếm</string>
     <string name="st_btnthem">Tạo</string>
@@ -244,7 +244,7 @@
     <string name="registry_success">Đăng ký thành công</string>
     <string name="st_xacNhanCancel">Không</string>
     <string name="st_xacNhanXoaCV">Bạn có muốn xóa công việc này không?</string>
-    <string name="st_chuacoTK">Bạn chưa có tài khoản? Đăng ký ngay</string>
+    <string name="st_chuacoTK"><u>Đăng ký ngay!</u></string>
     <string name="login_success">Đăng nhập thành công</string>
     <string name="hint_search">Nhập tên công việc</string>
 
