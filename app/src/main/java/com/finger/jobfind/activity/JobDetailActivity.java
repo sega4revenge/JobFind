@@ -244,11 +244,23 @@ public class JobDetailActivity extends AppCompatActivity implements ActivityComp
         luong=Integer.parseInt(i.getStringExtra("mucluong"));
         ngayup = i.getStringExtra("ngayup");
        // yeucaubangcap = i.getStringExtra("yeucaubangcap");
-        hv=Integer.parseInt(i.getStringExtra("yeucaubangcap"));
+        if(i.getStringExtra("yeucaubangcap").equals(""))
+        {
+
+        }else{
+            hv=Integer.parseInt(i.getStringExtra("yeucaubangcap"));
+        }
+
         dotuoi = i.getStringExtra("dotuoi");
         ngoaingu = i.getStringExtra("ngoaingu");
        // gioitinh = i.getStringExtra("gioitinh");
-        gt=Integer.parseInt(i.getStringExtra("gioitinh"));
+        if(i.getStringExtra("gioitinh").equals(""))
+        {
+
+        }else{
+            gt=Integer.parseInt(i.getStringExtra("gioitinh"));
+        }
+
         khac = i.getStringExtra("khac");
         motacv = i.getStringExtra("motacv");
         kn = i.getStringExtra("kn");

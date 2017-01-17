@@ -84,6 +84,12 @@
 
     <string-array name="nganhNghe">
         <item>All Career</item>
+        <!--<item>Lao động phổ thông</item>-->
+        <!--<item>Sinh viên làm thêm</item>-->
+        <!--<item>Bảo vệ</item>-->
+        <!--<item>Khách sạn/nhà hàng</item>-->
+        <!--<item>Người giúp việc</item>-->
+        <!--<item>Cộng tác viên</item>-->
         <item>Pharmacist</item>
         <item>pharmaceutical representative</item>
         <item>Maintenance</item>
