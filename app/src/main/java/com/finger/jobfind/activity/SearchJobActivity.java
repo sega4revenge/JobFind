@@ -54,6 +54,7 @@ public class SearchJobActivity extends AppCompatActivity {
     String[] arr = {"Tất cả ngành nghề", "Dược sỹ", "Trình dược viên", "Bảo trì/Sửa chửa", "Bán hàng", "Bảo hiểm", "Bất động sản", "Biên dịch viên", "Chứng khoáng", "Công nghệ cao", "IT Phần cứng/Mạng", "Internet/Online Media", "IT -Phần mềm", "Cơ khí,chế tạo", "Dệt may/Da giày", "Dịch vụ khách hàng", "Hàng không/Du lịch", "Điện/Điện tử", "Giáo dục/Đào tạo", "Kế toán", "Kiểm toán", "Y tế/Chăm sóc sức khỏe", "Kiến trúc/Thiết kế nội thất", "Ngân hàng", "Mỹ thuật/Nghệ thuật/Thiết kế", "Nhân sự", "Nông nghiệp/Lâm nghiệp", "Pháp lý", "Phi chính phủ/Phi lợi nhuận", "Cấp quản lý điều hành", "Quản cáo/Khuyến mại/Đối thoại", "Sản Xuất", "Thời vụ/Hợp đồng ngắn hạn", "Tài chính/Đầu tư", "Thời trang", "Thực phẩm đồ uống", "Truyền hình/Truyền thông/Báo chí", "Marketing", "Tư vấn", "Vận chuyển/Giao nhận", "Thu mua/Vật tư/Cung vận", "Viễn thông", "Xây dựng", "Xuất nhập khẩu", "Tự động hóa/Ôtô", "Overseass Jop", "Khác"};
     String[] arr2 = {"Tất cả địa điểm", "Hà Nội", "Đà Nẵng", "Hồ Chí Minh", "An Giang", "Bà Rịa-Vũng Tàu", "Bắc Cạn", "Bắc Giang", "Bạc Liêu", "Bắc Ninh", "Bến Tre", "Biên Hòa", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau", "Cần Thơ", "Cao Bằng", "Đắc Lắc", "Điện Biên", "Đồng Nai", "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Tây", "Hà Tĩnh", "Hải Dương", "Hải Phòng", "Hòa Bình", "Huế", "Hưng Yên", "Khánh hòa", "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định", "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình", "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa-Thiên-Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang", "Kiên Giang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái", "Quốc Tế", "Hậu Giang", "Khác"};
     private List<CongViec> celebrities = new ArrayList<>();
+    List<CongViec> tempArrayList;
     JSONArray mang;
     int countdata;
     int begin = 0;
@@ -75,6 +76,7 @@ public class SearchJobActivity extends AppCompatActivity {
     private int previousTotal = 0;
     private boolean loading2= true;
     private int visibleThreshold = 5;
+    int st=0;
     int firstVisibleItem, visibleItemCount, totalItemCount,pastVisiblesItems;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,16 +111,17 @@ public class SearchJobActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                st=1;
                 int textlength = newText.length();
-                List<CongViec> tempArrayList = new ArrayList<CongViec>();
+                tempArrayList = new ArrayList<CongViec>();
                 for(CongViec c: celebrities){
                     if (textlength <= c.tencongviec.length()) {
                         if (c.tencongviec.toLowerCase().contains(newText.toString().toLowerCase())) {
                             tempArrayList.add(c);
                         }else{
-                            // celebrities.remove(c);
+                            //celebrities.remove(c);
                         }
-                        //adapter.notifyDataSetChanged();
+                      //  adapter.notifyDataSetChanged();
                         adapter = new RecyclerAdapter(SearchJobActivity.this, tempArrayList, tempArrayList.size(), "", 1);
                         recyclerView.setAdapter(adapter);
                     }
@@ -193,26 +196,12 @@ public class SearchJobActivity extends AppCompatActivity {
                 new RecyclerItemClickListener(SearchJobActivity.this, recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int i) {
-                        Intent s = new Intent(SearchJobActivity.this, JobDetailActivity.class);
-                        s.putExtra("tencongty", celebrities.get(i).tecongty);
-                        s.putExtra("tencongviec", celebrities.get(i).tencongviec);
-                        s.putExtra("diadiem", celebrities.get(i).diadiem);
-                        s.putExtra("mucluong", celebrities.get(i).luong);
-                        s.putExtra("ngayup", celebrities.get(i).dateup);
-                        s.putExtra("yeucaubangcap", celebrities.get(i).bangcap);
-                        s.putExtra("dotuoi", celebrities.get(i).dotuoi);
-                        s.putExtra("ngoaingu", celebrities.get(i).ngoaingu);
-                        s.putExtra("gioitinh", celebrities.get(i).gioitinh);
-                        s.putExtra("khac", celebrities.get(i).khac);
-                        s.putExtra("motacv", celebrities.get(i).motacv);
-                        s.putExtra("kn", celebrities.get(i).kn);
-                        s.putExtra("macv", celebrities.get(i).macv);
-                        s.putExtra("img", celebrities.get(i).url);
-                        s.putExtra("sdt", celebrities.get(i).sdt);
-                        s.putExtra("motact", celebrities.get(i).motact);
-                        s.putExtra("matd", celebrities.get(i).matd);
-                        s.putExtra("type", 3);
-                        startActivity(s);
+                        if(st==0) {
+                        intentdetail(celebrities,i);
+                        }else{
+                          intentdetail(tempArrayList,i);
+                        }
+
 
                     }
 
@@ -276,7 +265,28 @@ public class SearchJobActivity extends AppCompatActivity {
         });
     }
 
-
+    public void intentdetail(List<CongViec> list,int pos){
+        Intent s = new Intent(SearchJobActivity.this, JobDetailActivity.class);
+        s.putExtra("tencongty", list.get(pos).tecongty);
+        s.putExtra("tencongviec", list.get(pos).tencongviec);
+        s.putExtra("diadiem", list.get(pos).diadiem);
+        s.putExtra("mucluong", list.get(pos).luong);
+        s.putExtra("ngayup", list.get(pos).dateup);
+        s.putExtra("yeucaubangcap", list.get(pos).bangcap);
+        s.putExtra("dotuoi", list.get(pos).dotuoi);
+        s.putExtra("ngoaingu", list.get(pos).ngoaingu);
+        s.putExtra("gioitinh", list.get(pos).gioitinh);
+        s.putExtra("khac", list.get(pos).khac);
+        s.putExtra("motacv", list.get(pos).motacv);
+        s.putExtra("kn", list.get(pos).kn);
+        s.putExtra("macv", list.get(pos).macv);
+        s.putExtra("img", list.get(pos).url);
+        s.putExtra("sdt", list.get(pos).sdt);
+        s.putExtra("motact", list.get(pos).motact);
+        s.putExtra("matd", list.get(pos).matd);
+        s.putExtra("type", 3);
+        startActivity(s);
+    }
 
     private void refreshContent() {
         begin=0;
@@ -294,7 +304,7 @@ public class SearchJobActivity extends AppCompatActivity {
 
     }
     public void search(String nganhnghe,String diadiem){
-
+        st=0;
         if (adapter != null) {
             celebrities.clear();
             adapter.notifyDataSetChanged();

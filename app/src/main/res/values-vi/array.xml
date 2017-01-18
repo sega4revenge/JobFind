@@ -84,12 +84,17 @@
 
     <string-array name="nganhNghe">
         <item>Tất cả ngành nghề</item>
-        <!--<item>Lao động phổ thông</item>-->
-        <!--<item>Sinh viên làm thêm</item>-->
-        <!--<item>Bảo vệ</item>-->
-        <!--<item>Khách sạn/nhà hàng</item>-->
-        <!--<item>Người giúp việc</item>-->
-        <!--<item>Cộng tác viên</item>-->
+        <item>Lao động phổ thông</item>
+        <item>Cộng tác viên</item>
+        <item>Sinh viên làm thêm</item>
+        <item>Sinh viên mới tốt nghiệp/Thực tập</item>
+        <item>Bảo vệ/vệ sĩ/An ninh</item>
+        <item>Khách sạn/nhà hàng</item>
+        <item>Phục vụ/Giúp việc/Tạp vụ</item>
+        <item>Tiếp thị/Quảng cáo/Marketing</item>
+        <item>Tài xế/Lái xe/Giao nhận</item>
+        <item>Việc làm thêm/ Việc làm ngoài giờ</item>
+        <item>Việc cần tuyển gấp</item>
         <item>Dược sỹ</item>
         <item>Trình dược viên</item>
         <item>Bảo trì/Sửa chửa</item>

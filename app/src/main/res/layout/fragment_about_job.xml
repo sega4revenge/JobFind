@@ -231,155 +231,170 @@
                             android:textSize="18sp"
 
                             />
+
                     </LinearLayout>
 
-
-                    <LinearLayout
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:orientation="horizontal">
+                        android:id="@+id/txtmt"
+                        android:layout_weight="1" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/st_kinhnghiem"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                            android:textSize="16sp" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/lininfor">
 
-                        <TextView
-                            android:id="@+id/txtnamkn"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="right"
-                            android:paddingLeft="16dp"
-                            android:textSize="16sp" />
-                    </LinearLayout>
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal"
+                            android:id="@+id/lin">
 
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/st_kinhnghiem"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textSize="16sp" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/txtnamkn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:paddingLeft="16dp"
+                                android:textSize="16sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/st_gt"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                            android:textSize="16sp" />
+                        </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/txtgioitinh"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="right"
-                            android:paddingLeft="16dp"
-                            android:text="Nam"
-                            android:textSize="16sp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
-                            />
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/st_gt"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textSize="16sp" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/txtgioitinh"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:paddingLeft="16dp"
+                                android:text="Nam"
+                                android:textSize="16sp"
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/st_dotuoiCV"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                            android:textSize="16sp" />
+                                />
+                        </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/txtdotuoi"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="right"
-                            android:paddingLeft="16dp"
-                            android:text="18 đến 30 tuổi"
-                            android:textSize="16sp"
-                            android:textStyle="normal" />
-                    </LinearLayout>
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/st_dotuoiCV"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textSize="16sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/st_ycngoainguCV"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                            android:textSize="16sp" />
+                            <TextView
+                                android:id="@+id/txtdotuoi"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:paddingLeft="16dp"
+                                android:text="18 đến 30 tuổi"
+                                android:textSize="16sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/txtnn"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="right"
-                            android:paddingLeft="16dp"
-                            android:text="Phiên dịch tiếng hàn"
-                            android:textSize="16sp"
-                            android:textStyle="normal" />
-                    </LinearLayout>
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/st_ycngoainguCV"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textSize="16sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/st_yckynangCV"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                            android:textSize="16sp" />
+                            <TextView
+                                android:id="@+id/txtnn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:paddingLeft="16dp"
+                                android:text="Phiên dịch tiếng hàn"
+                                android:textSize="16sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/txtkn"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="right"
-                            android:paddingLeft="16dp"
-                            android:text="Phiên dịch tiếng hàn"
-                            android:textSize="16sp"
-                            android:textStyle="normal" />
-                    </LinearLayout>
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/st_yckynangCV"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textSize="16sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/st_yckhacCV"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                            android:textSize="16sp" />
+                            <TextView
+                                android:id="@+id/txtkn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:paddingLeft="16dp"
+                                android:text="Phiên dịch tiếng hàn"
+                                android:textSize="16sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/txtkhac"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:paddingTop="8dp"
-                            android:text="Phiên dịch tiếng hàn"
-                            android:textSize="16sp" />
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/st_yckhacCV"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txtkhac"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="8dp"
+                                android:text="Phiên dịch tiếng hàn"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
                     </LinearLayout>
 
                     <LinearLayout
 
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="24dp"
                         android:gravity="center"
                         android:orientation="horizontal">
@@ -393,14 +408,17 @@
 
                         <TextView
                             android:id="@+id/txthethan"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="16dp"
                             android:text="23/05/2016"
                             android:textColor="#ff0606"
-                            android:textSize="18sp" />
+                            android:textSize="18sp"
+                            android:layout_weight="1" />
 
                     </LinearLayout>
+
+
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 

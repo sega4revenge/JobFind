@@ -84,12 +84,17 @@
 
     <string-array name="nganhNghe">
         <item>All Career</item>
-        <!--<item>Lao động phổ thông</item>-->
-        <!--<item>Sinh viên làm thêm</item>-->
-        <!--<item>Bảo vệ</item>-->
-        <!--<item>Khách sạn/nhà hàng</item>-->
-        <!--<item>Người giúp việc</item>-->
-        <!--<item>Cộng tác viên</item>-->
+        <item>Unskilled worker</item>
+        <item>Collaborator</item>
+        <item>Students do more</item>
+        <item>Just have graduated/Interns</item>
+        <item>Defense/Guard/Security</item>
+        <item>Hotel/Restaurant</item>
+        <item>Servant/Maid/Housekeeper</item>
+        <item>Advertiser/Marketing</item>
+        <item>Driver/Delivery</item>
+        <item>Part-time job</item>
+        <item>Urgent Hiring</item>
         <item>Pharmacist</item>
         <item>pharmaceutical representative</item>
         <item>Maintenance</item>

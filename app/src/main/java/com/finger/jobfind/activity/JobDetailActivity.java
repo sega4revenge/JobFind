@@ -26,6 +26,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -61,6 +62,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.finger.jobfind.activity.MainActivity.uid;
+
 public class JobDetailActivity extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback {
 
     private NetworkImageView logo;
@@ -81,7 +84,7 @@ public class JobDetailActivity extends AppCompatActivity implements ActivityComp
     private TabLayout tabLayout;
     private ViewPager viewPager;
     AlertDialog dialog;
-
+    AsyncDataClass asyncRequestObject;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -116,8 +119,6 @@ public class JobDetailActivity extends AppCompatActivity implements ActivityComp
             fabMenu.setVisibility(View.GONE);
         }
 
-        AsyncDataClass asyncRequestObject = new AsyncDataClass();
-        asyncRequestObject.execute(AppConfig.URL_XUATHS, id,"");
 
     }
 
@@ -150,32 +151,59 @@ public class JobDetailActivity extends AppCompatActivity implements ActivityComp
                 //TODO something when floating action menu second item clicked
                 if (type == 0) {
                     Toast.makeText(getApplicationContext(), R.string.st_reg, Toast.LENGTH_SHORT).show();
-                }else{
+                }else {
                     LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                     View view = inflater.inflate(R.layout.dialog_createlangues, null);
                     final AlertDialog.Builder builder = new AlertDialog.Builder(JobDetailActivity.this);
                     String ms = getResources().getString(R.string.addProfile);
                     builder.setTitle(ms);
-                    builder.setView(view);
-                    lv = (ListView) view.findViewById(R.id.lvnn);
-                    adapter = new ListViewAdapter(JobDetailActivity.this, android.R.layout.simple_list_item_1, celebrities, 1);
-                    lv.setAdapter(adapter);
-                    lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                        @Override
-                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                            //   Toast.makeText(JobDetailActivity.this,id+macv+"",Toast.LENGTH_SHORT).show();
-                            AsyncDataClass asyncRequestObject = new AsyncDataClass();
-                            asyncRequestObject.execute(AppConfig.URL_NOPHS, celebrities.get(i).id, macv);
-                        }
-                    });
+                    if(celebrities.size()>0) {
+                        builder.setView(view);
+                        lv = (ListView) view.findViewById(R.id.lvnn);
+                        adapter = new ListViewAdapter(JobDetailActivity.this, android.R.layout.simple_list_item_1, celebrities, 1);
+                        lv.setAdapter(adapter);
+                        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                //   Toast.makeText(JobDetailActivity.this,id+macv+"",Toast.LENGTH_SHORT).show();
+                                AsyncDataClass asyncRequestObject = new AsyncDataClass();
+                                asyncRequestObject.execute(AppConfig.URL_NOPHS, celebrities.get(i).id, macv);
+                            }
+                        });
+
+                    }else{
+                        LayoutInflater inflater2 = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                        View view2 = inflater2.inflate(R.layout.showmess_notsv_needcreate, null);
+                        builder.setView(view2);
+                        Button create = (Button) view2.findViewById(R.id.btcreate);
+                        create.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                Intent i = new Intent(JobDetailActivity.this,CreateProfileActivity.class);
+                                i.putExtra("name","");
+                                i.putExtra("birthdate","");
+                                i.putExtra("sex","");
+                                i.putExtra("email","");
+                                i.putExtra("phone","");
+                                i.putExtra("andress","");
+                                i.putExtra("homeless","");
+                                i.putExtra("logo","");
+                                i.putExtra("uniqueid",uid);
+                                i.putExtra("status","0");
+                                startActivity(i);
+                                dialog.cancel();
+                            }
+                        });
+                    }
                     builder.setNegativeButton(R.string.st_thoat, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
+                            //dialog.cancel();
                         }
                     });
-                    dialog= builder.create();
-                    dialog.show();
+                        dialog = builder.create();
+                        dialog.show();
+
                 }
             }
         });
@@ -220,7 +248,7 @@ public class JobDetailActivity extends AppCompatActivity implements ActivityComp
     }
 
     private void setData() {
-        id = MainActivity.uid;
+        id = uid;
     }
 
     private void init() {
@@ -312,6 +340,17 @@ public class JobDetailActivity extends AppCompatActivity implements ActivityComp
 
         }
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(adapter==null)
+        {
+            asyncRequestObject = new AsyncDataClass();
+            asyncRequestObject.execute(AppConfig.URL_XUATHS, id,"");
+
+        }
+      }
 
     @Override
     protected void onStart() {

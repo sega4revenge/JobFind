@@ -157,7 +157,7 @@
     <string name="st_uploading">Đang tải...</string>
     <string name="st_plsWait">Vui lòng đợi tý...</string>
     <string name="st_errNamePass">Tên đăng nhập hoặc mật khẩu hoặc email không hợp lệ</string>
-
+    <string name="st_mess_notcv_needcreate">Chưa có CV, nhấn vào đây để tạo.</string>
     <!--edit_profile-->
     <string name="st_tenProf">Tên</string>
     <string name="st_hinttenProf">Nhập tên</string>

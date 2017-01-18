@@ -49,10 +49,11 @@ public class MoreHotAcitivity extends AppCompatActivity {
     JSONArray mang;
     private RecyclerAdapter adapter = null;
     AsyncDataClass asyncRequestObject;
-    int countdata,beginloadmore=0;
+    int countdata,beginloadmore=0,st=1;
     boolean loading;
     private ProgressBar progressBar;
     private List<CongViec> celebrities = new ArrayList<>();
+    List<CongViec> tempArrayList;
     SwipeRefreshLayout mSwipeRefreshLayout;
     RecyclerView recyclerView;
 
@@ -84,29 +85,12 @@ public class MoreHotAcitivity extends AppCompatActivity {
                 new RecyclerItemClickListener(MoreHotAcitivity.this, recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int i) {
-                        Intent s = new Intent(MoreHotAcitivity.this, JobDetailActivity.class);
-                        s.putExtra("tencongty", celebrities.get(i).tecongty);
-                        s.putExtra("tencongviec", celebrities.get(i).tencongviec);
-                        s.putExtra("diadiem", celebrities.get(i).diadiem);
-                        s.putExtra("mucluong", celebrities.get(i).luong);
-                        s.putExtra("ngayup", celebrities.get(i).dateup);
-                        s.putExtra("yeucaubangcap", celebrities.get(i).bangcap);
-                        s.putExtra("dotuoi", celebrities.get(i).dotuoi);
-                        s.putExtra("ngoaingu", celebrities.get(i).ngoaingu);
-                        s.putExtra("gioitinh", celebrities.get(i).gioitinh);
-                        s.putExtra("khac", celebrities.get(i).khac);
-                        s.putExtra("motacv", celebrities.get(i).motacv);
-                        s.putExtra("kn", celebrities.get(i).kn);
-                        s.putExtra("macv", celebrities.get(i).macv);
-                        s.putExtra("img", celebrities.get(i).url);
-                        s.putExtra("sdt", celebrities.get(i).sdt);
-                        s.putExtra("motact", celebrities.get(i).motact);
-                        s.putExtra("matd", celebrities.get(i).matd);
-                        s.putExtra("type", 3);
-                        startActivity(s);
-
+                        if (st == 0) {
+                            intentdetail(celebrities, i);
+                        } else {
+                            intentdetail(tempArrayList, i);
+                        }
                     }
-
                     @Override
                     public boolean onLongItemClick(View view, int position) {
                         // do whatever
@@ -238,6 +222,28 @@ public class MoreHotAcitivity extends AppCompatActivity {
         }
         return answer;
     }
+    public void intentdetail(List<CongViec> list,int pos){
+        Intent s = new Intent(MoreHotAcitivity.this, JobDetailActivity.class);
+        s.putExtra("tencongty", list.get(pos).tecongty);
+        s.putExtra("tencongviec", list.get(pos).tencongviec);
+        s.putExtra("diadiem", list.get(pos).diadiem);
+        s.putExtra("mucluong", list.get(pos).luong);
+        s.putExtra("ngayup", list.get(pos).dateup);
+        s.putExtra("yeucaubangcap", list.get(pos).bangcap);
+        s.putExtra("dotuoi", list.get(pos).dotuoi);
+        s.putExtra("ngoaingu", list.get(pos).ngoaingu);
+        s.putExtra("gioitinh", list.get(pos).gioitinh);
+        s.putExtra("khac", list.get(pos).khac);
+        s.putExtra("motacv", list.get(pos).motacv);
+        s.putExtra("kn", list.get(pos).kn);
+        s.putExtra("macv", list.get(pos).macv);
+        s.putExtra("img", list.get(pos).url);
+        s.putExtra("sdt", list.get(pos).sdt);
+        s.putExtra("motact", list.get(pos).motact);
+        s.putExtra("matd", list.get(pos).matd);
+        s.putExtra("type", 3);
+        startActivity(s);
+    }
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -262,8 +268,9 @@ public class MoreHotAcitivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                st=1;
                 int textlength = newText.length();
-                List<CongViec> tempArrayList = new ArrayList<CongViec>();
+                tempArrayList = new ArrayList<CongViec>();
                 for(CongViec c: celebrities){
                     if (textlength <= c.tencongviec.length()) {
                         if (c.tencongviec.toLowerCase().contains(newText.toString().toLowerCase())) {

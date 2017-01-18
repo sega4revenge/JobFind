@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -79,7 +80,13 @@ public class JobAboutFragment extends Fragment {
         arrnganh= getResources().getStringArray(R.array.nganhNghe);
         init();
         actionGetIntent();
-
+        if(kn.equals("")&&ngoaingu.equals("")&&dotuoi.equals(""))
+        {
+            LinearLayout lin = (LinearLayout) v.findViewById(R.id.lininfor);
+            lin.setVisibility(View.GONE);
+            TextView txt = (TextView) v.findViewById(R.id.txtmt);
+            txt.setText(khac);
+        }
         txtdiachi.setText(diadiem);
         txtluong.setText(arrsalary[luong] + " VND");
         txtdate.setText(ngayup + "");

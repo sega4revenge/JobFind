@@ -69,7 +69,7 @@
     <string name="st_exit">Exit</string>
     <string name="st_ycThoat">Do you want to exit this application?</string>
     <string name="st_quenmk">Send</string>
-
+    <string name="st_mess_notcv_needcreate">dont have profile, click here to create.</string>
     <!--error-->
     <string name="st_errServer">Can not connect to server</string>
     <string name="st_loiMK">Passwords do not match</string>

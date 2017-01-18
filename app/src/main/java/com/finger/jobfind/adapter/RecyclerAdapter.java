@@ -119,7 +119,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         if (time > now || time <= 0) {
             return null;
         }
-
         // TODO: localize
         final long diff = now - time;
         if (diff < MINUTE_MILLIS) {

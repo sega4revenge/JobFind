@@ -92,6 +92,7 @@ public class MainActivity extends AppCompatActivity   {
         uid = user.get(SessionManager.KEY_ID);
 
         fabMenu = (FloatingActionButton) findViewById(R.id.fabMenu);
+        changeFab();
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
         Log.d(TAG, "Refreshed token: " + refreshedToken);
         MyFirebaseInstanceIDService s = new MyFirebaseInstanceIDService();
@@ -135,7 +136,8 @@ public class MainActivity extends AppCompatActivity   {
                 switch (position) {
                     case 0:
                         setToolbarTitle(0);
-                        showFab();
+                        changeFab();
+                       // showFab();
                         tabCall.setIcon(R.drawable.icon_menus);
                         break;
                     case 1:
@@ -147,6 +149,7 @@ public class MainActivity extends AppCompatActivity   {
                         tabCall2.setIcon(R.drawable.icon_menus);
                         break;
                     case 2:
+                        backtop();
                         setToolbarTitle(2);
                         showFab();
                         tabCall.setIcon(R.drawable.icon_menu3);
@@ -154,8 +157,9 @@ public class MainActivity extends AppCompatActivity   {
                         tabCall3.setIcon(R.drawable.icon_menus);
                         break;
                     case 3:
+                        backtop();
                         setToolbarTitle(3);
-                        showFab();
+                        hideFab();
                         tabCall.setIcon(R.drawable.icon_menu4);
                         TabLayout.Tab tabCall4 = tabLayout.getTabAt(0);
                         tabCall4.setIcon(R.drawable.icon_menus);
@@ -176,10 +180,52 @@ public class MainActivity extends AppCompatActivity   {
             }
         });
         setupTabIcons();
+//        fabMenu.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i =new Intent(MainActivity.this,CreateProfileActivity.class);
+//                i.putExtra("name",namepref);
+//                i.putExtra("birthdate",birthdate);
+//                i.putExtra("sex",sexef);
+//                i.putExtra("email",emailpref);
+//                i.putExtra("phone",phone);
+//                i.putExtra("andress",andress);
+//                i.putExtra("homeless",homeless);
+//                i.putExtra("logo",logo);
+//                i.putExtra("uniqueid",uid);
+//                i.putExtra("status",status);
+//                startActivity(i);
+//            }
+//        });
+    }
+    private void changeFab() {
+        if (fabMenu.getVisibility() == View.GONE) {
+            fabMenu.setVisibility(View.VISIBLE);
+        }
+        fabMenu.setImageResource(R.drawable.ic_action_action_search);
         fabMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i =new Intent(MainActivity.this,CreateProfileActivity.class);
+                Intent i = new Intent(MainActivity.this,SearchJobActivity.class);
+                i.putExtra("status",0);
+                startActivity(i);
+            }
+        });
+    }
+    private void hideFab() {
+        if (fabMenu.getVisibility() == View.VISIBLE) {
+           fabMenu.setVisibility(View.GONE);
+        }
+    }
+    private void showFab() {
+        if (fabMenu.getVisibility() == View.GONE) {
+            fabMenu.setVisibility(View.VISIBLE);
+        }
+        fabMenu.setImageResource(R.drawable.fab_add);
+        fabMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this,CreateProfileActivity.class);
                 i.putExtra("name",namepref);
                 i.putExtra("birthdate",birthdate);
                 i.putExtra("sex",sexef);
@@ -193,17 +239,6 @@ public class MainActivity extends AppCompatActivity   {
                 startActivity(i);
             }
         });
-    }
-
-    private void hideFab() {
-        if (fabMenu.getVisibility() == View.VISIBLE) {
-           fabMenu.setVisibility(View.GONE);
-        }
-    }
-    private void showFab() {
-        if (fabMenu.getVisibility() == View.GONE) {
-            fabMenu.setVisibility(View.VISIBLE);
-        }
     }
 
 
@@ -305,9 +340,9 @@ public class MainActivity extends AppCompatActivity   {
                 }
                 return true;
             case R.id.search:
-                Intent i = new Intent(this,SearchJobActivity.class);
-                i.putExtra("status",0);
-                startActivity(i);
+//                Intent i = new Intent(this,SearchJobActivity.class);
+//                i.putExtra("status",0);
+//                startActivity(i);
                 break;
 
 
