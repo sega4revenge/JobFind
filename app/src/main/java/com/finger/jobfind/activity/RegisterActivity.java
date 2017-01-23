@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.finger.jobfind.R;
 import com.finger.jobfind.config.AppConfig;
+import com.finger.jobfind.pref.SessionManager;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -33,6 +34,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -40,13 +42,14 @@ public class RegisterActivity extends AppCompatActivity {
 
     private String type;
     private String pass1, email1, repass, ten,uid;
-
+    SessionManager session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
+        session = new SessionManager(getApplicationContext());
+        HashMap<String, String> user = session.getUserDetails();
         Intent i = getIntent();
         int key = i.getIntExtra("KEY", 10);
         type = key + "";
@@ -207,6 +210,15 @@ public class RegisterActivity extends AppCompatActivity {
                 return;
             }
             if (jsonResult == 1) {
+                session.createLoginSession(ten, email1, "", pass1, uid);
+                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                intent.putExtra("USERNAME", email1);
+                intent.putExtra("name", ten);
+                intent.putExtra("uid", uid);
+                intent.putExtra("mtype", type);
+                intent.putExtra("logo", "");
+                startActivity(intent);
+                finish();
 
 //                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
 //                intent.putExtra("USERNAME", email1);
@@ -215,9 +227,9 @@ public class RegisterActivity extends AppCompatActivity {
 //                intent.putExtra("uid", uid);
 //                intent.putExtra("mtype", 1);
 //                startActivity(intent);
-                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                Toast.makeText(getApplicationContext(), R.string.registry_success, Toast.LENGTH_SHORT).show();
-                finish();
+//                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+//                Toast.makeText(getApplicationContext(), R.string.registry_success, Toast.LENGTH_SHORT).show();
+//                finish();
 
             }
         }

@@ -64,6 +64,7 @@ public class MoreHotAcitivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setElevation(0);
+        st = 0;
         addView();
 
         loading = true;
@@ -87,9 +88,9 @@ public class MoreHotAcitivity extends AppCompatActivity {
                     public void onItemClick(View view, int i) {
                         if (st == 0) {
                             intentdetail(celebrities, i);
-                        } else {
+                        } else if(st == 1) {
                             intentdetail(tempArrayList, i);
-                        }
+                                }
                     }
                     @Override
                     public boolean onLongItemClick(View view, int position) {
@@ -276,9 +277,9 @@ public class MoreHotAcitivity extends AppCompatActivity {
                         if (c.tencongviec.toLowerCase().contains(newText.toString().toLowerCase())) {
                             tempArrayList.add(c);
                         }else{
-                            // celebrities.remove(c);
+                            //celebrities.remove(c);
                         }
-                        // adapter.notifyDataSetChanged();
+                        //adapter.notifyDataSetChanged();
                         adapter = new RecyclerAdapter(MoreHotAcitivity.this, tempArrayList, 0, "", 1);
                         recyclerView.setAdapter(adapter);
                     }

@@ -51,12 +51,22 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
     public void onBindViewHolder(MyViewHolder holder, int position) {
         CongViec movie = joblist.get(position);
         holder.nameconpany.setText(movie.getTecongty());
-        Glide.with(mContext).load(joblist.get(position).url)
-                .crossFade()
-                .thumbnail(0.5f)
-                .diskCacheStrategy( DiskCacheStrategy.ALL )
-                .skipMemoryCache( true )
-                .into(holder.logocompany);
+        if(joblist.get(position).url.equals("null"))
+        {
+            Glide.with(mContext).load(R.drawable.logo2)
+                    .crossFade()
+                    .thumbnail(0.5f)
+                    .diskCacheStrategy( DiskCacheStrategy.ALL )
+                    .skipMemoryCache( true )
+                    .into(holder.logocompany);
+        }else{
+            Glide.with(mContext).load(joblist.get(position).url)
+                    .crossFade()
+                    .thumbnail(0.5f)
+                    .diskCacheStrategy( DiskCacheStrategy.ALL )
+                    .skipMemoryCache( true )
+                    .into(holder.logocompany);
+        }
     }
 
     @Override

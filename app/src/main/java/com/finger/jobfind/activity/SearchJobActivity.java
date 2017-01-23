@@ -18,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.finger.jobfind.R;
@@ -73,11 +74,10 @@ public class SearchJobActivity extends AppCompatActivity {
     SwipeRefreshLayout mSwipeRefreshLayout;
     LinearLayoutManager mLayoutManager;
     boolean loading = true;
-    private int previousTotal = 0;
     private boolean loading2= true;
-    private int visibleThreshold = 5;
     int st=0;
-    int firstVisibleItem, visibleItemCount, totalItemCount,pastVisiblesItems;
+    TextView mess;
+    int  visibleItemCount, totalItemCount,pastVisiblesItems;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,6 +145,7 @@ public class SearchJobActivity extends AppCompatActivity {
     private void addView() {
         progressBar = (ProgressBar) findViewById(R.id.pbLoader);
         nganhnghe = (Spinner) findViewById(R.id.spnganh);
+        mess=(TextView)  findViewById(R.id.showmess);
         diadiem = (Spinner) findViewById(spdiadiem);
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.activity_main_swipe_refresh_layout);
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -201,8 +202,6 @@ public class SearchJobActivity extends AppCompatActivity {
                         }else{
                           intentdetail(tempArrayList,i);
                         }
-
-
                     }
 
                     @Override
@@ -397,12 +396,13 @@ public class SearchJobActivity extends AppCompatActivity {
                         cv.setTrangthai("3");
                         celebrities.add(cv);
                     }
+                    mess.setVisibility(View.GONE);
                     adapter.notifyDataSetChanged();
                     have = 1;
                     status = 1;
                 } else {
-                    if (have == 0) {
-                        Toast.makeText(SearchJobActivity.this, R.string.toast_notfind, Toast.LENGTH_SHORT).show();
+                    if( beginloadmore==0) {
+                        mess.setVisibility(View.VISIBLE);
                     }
                     status = 0;
                 }
